@@ -10,7 +10,7 @@ import com.vdx.ConfigManageServer.redis.entity.ConfigEntity;
 import com.vdx.ConfigManageServer.redis.respository.ConfigDao;
 
 @Service
-public class FileProcessorServiceImpl implements FileProcessor {
+public class FileProcessorServiceImpl implements FileProcessorService {
 
 	@Autowired
 	ConfigDao confDao;
