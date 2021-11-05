@@ -20,6 +20,7 @@ public class ConfigDao {
 	@CachePut(key="#entity.id", value = "Config")
 	public ConfigEntity saveOrUpdate(ConfigEntity entity) {
 		template.opsForHash().put(HASH_KEY, entity.getId(), entity);
+		ConfigEntity res = (ConfigEntity) template.opsForHash().get(HASH_KEY, entity.getId());
 		return entity;
 	}
 
